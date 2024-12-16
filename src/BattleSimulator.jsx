@@ -20,27 +20,29 @@ function BattleSimulator({ minDamage = 0, maxDamage = 50 }) {
         }
     }
     return (
-        <>
+        <div className="main-container">
             <h1>Space Battle Simulator</h1>
-            <div className="player">
-                <div className="green">
-                    <PlayerHealth player='Player' health={ playerHealth }></PlayerHealth>
+            <div className="game-container">
+                <div className="player">
+                    <div className="green">
+                        <PlayerHealth player='Player' health={ playerHealth }></PlayerHealth>
+                    </div>
+                    <div>
+                        <Emoji health={ playerHealth }></Emoji>
+                    </div>
                 </div>
-                <div>
-                    <Emoji health={ playerHealth }></Emoji>
-                </div>
-            </div>
-            <Fire playerHealth={ playerHealth } enemyHealth={ enemyHealth } callFire={ healthCalculator }></Fire>
-            <div className="enemy">
-                <div className="red">
-                    <PlayerHealth player='Enemy' health={ enemyHealth }></PlayerHealth>
-                </div>
-                <div>
-                    <Emoji health={ enemyHealth }></Emoji>
+                <Fire playerHealth={ playerHealth } enemyHealth={ enemyHealth } callFire={ healthCalculator }></Fire>
+                <div className="enemy">
+                    <div className="red">
+                        <PlayerHealth player='Enemy' health={ enemyHealth }></PlayerHealth>
+                    </div>
+                    <div>
+                        <Emoji health={ enemyHealth }></Emoji>
+                    </div>
                 </div>
             </div>
             <FooterBanner playerHealth={ playerHealth } enemyHealth={ enemyHealth }></FooterBanner>
-        </>
+        </div>
     )
 }
 

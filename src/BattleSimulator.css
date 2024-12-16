@@ -1,12 +1,24 @@
-.player {
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(0%, -50%);
-    display: grid;
-    grid-template-columns: 1fr 0.1fr;
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 88vh;
+    padding: 20px;
+}
+
+.game-container {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.player,
+.enemy {
     font-size: x-large;
     font-family: monospace;
+    display: flex;
+    align-items: center;
 }
 
 .green {
@@ -14,16 +26,6 @@
     margin: 0 0.5em 0 0;
 }
 
-.enemy {
-    position: absolute;
-    top: 50%;
-    right: 5%;
-    transform: translate(0%, -50%);
-    display: grid;
-    grid-template-columns: 1fr 0.1fr;
-    font-size: x-large;
-    font-family: monospace;
-}
 
 .red {
     color: red;
@@ -33,7 +35,5 @@
 h1 {
     font-family: fantasy;
     color: white;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    text-align: center;
 }
