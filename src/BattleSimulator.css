@@ -1,0 +1,39 @@
+.player {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    font-size: x-large;
+    font-family: monospace;
+}
+
+.green {
+    color: green;
+    margin: 0 0.5em 0 0;
+}
+
+.enemy {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(0%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 0.1fr;
+    font-size: x-large;
+    font-family: monospace;
+}
+
+.red {
+    color: red;
+    margin: 0 0.5em 0 0;
+}
+
+h1 {
+    font-family: fantasy;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
